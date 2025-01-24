@@ -8,6 +8,7 @@
 
 int main() {
     printf("Desafio Cartas Super Trunfo!\n");
+    printf("teste");
 
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
