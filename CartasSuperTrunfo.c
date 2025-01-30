@@ -6,7 +6,9 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste larissa
 
-int main() {
+int main()
+{
+    
     printf("Bem-vindo ao Desafio Super Trunfo - Países!\n"); //inicializando o jogo
     printf("Começaremos com o cadastro das cartas!\n");
 
@@ -16,8 +18,10 @@ int main() {
         float pib;
         char cidade[20], estado[20];
         int resp;
+        float densidade_populacional;
+        float pib_per_capta;
 
-        printf("Insira o Estado: \n"); //coletando os dados do usuário
+        printf("Insira o Estado: \n"); //coletando os dados da carta do usuário
         scanf("%s", &estado);
 
         printf("Insira a cidade: \n");
@@ -36,15 +40,19 @@ int main() {
         scanf("%d", &pontos_turisticos);
 
 
-
         printf("\nDados da Carta:\n"); //mostrando ao usuário os dados cadastrados
         printf("Estado: %s \n", estado);
         printf("Cidade: %s \n", cidade);
-        printf("População: %d \n", populacao);
-        printf("Área: %f \n", area);
-        printf("PIB: %f \n", pib);
+        printf("População: %d pessoas\n", populacao);
+        printf("Área: %.3f km²\n", area);
+        printf("PIB: R$ %.3f\n", pib);
         printf("Número de Pontos Turísticos: %d \n", pontos_turisticos);
 
+        densidade_populacional = populacao / area; // calculando a densidade populacional e exibindo
+        printf("Densidade Populacional: %.1f hab/km²\n", densidade_populacional);
+
+        pib_per_capta = pib / populacao; // calculando o pib per capta e exibindo
+        printf("PIB per capta: R$ %.2f", pib_per_capta);
 
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
